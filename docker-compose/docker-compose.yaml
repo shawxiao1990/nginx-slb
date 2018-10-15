@@ -1,0 +1,14 @@
+version: '2.1'
+services:
+  nginx:
+    image: nginx-amplify
+    environment:
+    - API_KEY=emotibot
+    - AMPLIFY_IMAGENAME=my-service-123
+    ports:
+    - 80:80
+    volumes:
+    - /home/deployer/nginx-slb-github/conf/nginx.conf:/etc/nginx/nginx.conf
+    - /home/deployer/nginx-slb-github/conf/:/etc/nginx/conf/
+    container_name: nginx
+    hostname: nginx
