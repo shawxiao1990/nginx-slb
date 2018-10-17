@@ -7,5 +7,7 @@ services:
     volumes:
     - /home/deployer/nginx-slb/conf/nginx.conf:/etc/nginx/nginx.conf
     - /home/deployer/nginx-slb/conf/conf.d/:/etc/nginx/conf.d/
+    - /home/deployer/nginx-slb/log/error.log/:/var/log/nginx/
     container_name: nginx
     hostname: nginx
+    restart: always
